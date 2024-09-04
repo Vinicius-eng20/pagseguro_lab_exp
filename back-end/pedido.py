@@ -44,7 +44,7 @@ payload = {
 }
 headers = {
     "accept": "*/*",
-    "Authorization": "Bearer d0c88e61-dd0c-4b84-9111-8599d759cff3ce50619140ff884808dfa689d40098936a63-5d2d-4b52-b326-1eef9a60cc96",
+    f"Authorization": "Bearer {token}",
     "content-type": "application/json"
 }
 
