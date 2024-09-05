@@ -1,5 +1,5 @@
 # Laboratório Experimental - API PagSeguro
-# Sistema de Pagamentos usando a API do PagSeguro
+Sistema de Pagamentos usando a API do PagSeguro
 
 ## O que precisamos:
 
@@ -23,3 +23,9 @@
 - Python (Flask API, requests)
 - PostgreSQL
 - Docker
+
+## Diagramas
+
+### Casos de uso
+
+![Diagrama de Casos de Uso](./img/use_case.jpg)
