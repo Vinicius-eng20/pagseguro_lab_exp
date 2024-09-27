@@ -52,6 +52,7 @@
                     <span class="badge badge-secondary badge-pill">3</span>
                 </h4>
                 <ul class="list-group mb-3">
+                    <!-- 
                     <li class="list-group-item d-flex justify-content-between lh-condensed items">
                         <div>
                             <h6 class="my-0 item">Produto 1</h6>
@@ -59,44 +60,55 @@
                         </div>
                         <span class="text-muted">Qtd = <span class="qtde">1</span></span>
                         <span class="text-muted">R$<span class="unit-value">12</span></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between lh-condensed items">
-                        <div>
-                            <h6 class="my-0 item">Produto 2</h6>
-                            <small class="text-muted descricao">Breve descrição</small>
-                        </div>
-                        <span class="text-muted">Qtd = <span class="qtde">1</span></span>
-                        <span class="text-muted">R$<span class="unit-value">8</span></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between lh-condensed items">
-                        <div>
-                            <h6 class="my-0 item">Produto 3</h6>
-                            <small class="text-muted descricao">Breve descrição</small>
-                        </div>
-                        <span class="text-muted">Qtd = <span class="qtde">1</span></span>
-                        <span class="text-muted">R$<span class="unit-value">10</span></span>
-                    </li>
-                    <!-- <li class="list-group-item d-flex justify-content-between bg-light">
-                        <div class="text-success">
-                            <h6 class="my-0">Promo code</h6>
-                            <small>EXAMPLECODE</small>
-                        </div>
-                        <span class="text-success">-$5</span>
-                    </li> -->
+                    </li> 
+                    -->
+
+                    <table class="table text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col" class="text-start">Produto</th>
+                                <th scope="col">Qtde</th>
+                                <th scope="col">Preço</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border items">
+                                <th scope="row">1</th>
+                                <td class="text-start">
+                                    <h6 class="my-0 item">Produto 1</h6>
+                                    <small class="text-muted descricao">Breve descrição</small>
+                                </td>
+                                <td class="qtde">5</td>
+                                <td>R$ <span class="unit-value">12,99</span></td>
+                            </tr>
+                            <tr class="border items">
+                                <th scope="row">2</th>
+                                <td class="text-start">
+                                    <h6 class="my-0 item">Produto 2</h6>
+                                    <small class="text-muted descricao">Breve descrição</small>
+                                </td>
+                                <td class="qtde">4</td>
+                                <td>R$ <span class="unit-value">8,99</span></td>
+                            </tr>
+                            <tr class="border items">
+                                <th scope="row">3</th>
+                                <td class="text-start">
+                                    <h6 class="my-0 item">Produto 3</h6>
+                                    <small class="text-muted descricao">Breve descrição</small>
+                                </td>
+                                <td class="qtde">2</td>
+                                <td>R$ <span class="unit-value">10,99</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                     <li class="list-group-item d-flex justify-content-between bg-info">
                         <span>Total (BRL)</span>
-                        <strong>R$<span class="total-value"></span></strong>
+                        <strong><span class="total-value"></span></strong>
                     </li>
                 </ul>
 
-                <!-- <form class="card p-2">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Promo code">
-                        <div class="input-group-append">
-                            <button type="submit" class="btn btn-secondary">Redeem</button>
-                        </div>
-                    </div>
-                </form> -->
             </div>
             <div class="col-md-8 order-md-1">
                 <h4 class="mb-3">Informações de Pagamento</h4>
@@ -104,32 +116,20 @@
                     <div class="row">
                         <div class="col-md-7 mb-3">
                             <label for="firstName">Nome</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                            <input type="text" class="form-control" id="name" placeholder="" value="" required>
                             <div class="invalid-feedback">
                                 Valid name is required.
                             </div>
                         </div>
                         <div class="col-md-5 mb-3">
-                            <label for="lastName">CPF</label>
-                            <input type="text" class="form-control" id="cpf" placeholder="" maxlength="14" value="" required onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                            <label for="cpf">CPF</label>
+                            <input type="text" class="form-control" id="cpf" placeholder="" maxlength="14" value=""
+                                required onkeypress="return event.charCode >= 48 && event.charCode <= 57">
                             <div class="invalid-feedback">
                                 Valid CPF is required.
                             </div>
                         </div>
                     </div>
-
-                    <!-- <div class="mb-3">
-                        <label for="username">Username</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">@</span>
-                            </div>
-                            <input type="text" class="form-control" id="username" placeholder="Username" required>
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Your username is required.
-                            </div>
-                        </div>
-                    </div> -->
 
                     <div class="mb-3">
                         <label for="email">Email</label>
@@ -139,35 +139,31 @@
                         </div>
                     </div>
 
-                    <div class="mb-3">
-                        <label for="address">Endereço</label>
-                        <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
-                        <div class="invalid-feedback">
-                            Please enter your shipping address.
-                        </div>
-                    </div>
-
                     <div class="row">
                         <div class="col-md-2 mb-3">
                             <label for="country-code">Cód. País</label>
-                            <input type="text" class="form-control" id="country-code" placeholder="+55" value="" disabled>
+                            <input type="text" class="form-control" id="country-code" placeholder="+55" value=""
+                                disabled>
                         </div>
                         <div class="col-md-2 mb-3">
                             <label for="region-code">DDD</label>
-                            <input type="text" class="form-control" id="region-code" placeholder="" value="" maxlength="2" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                            <input type="text" class="form-control" id="region-code" placeholder="" value=""
+                                maxlength="2" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
                             <div class="invalid-feedback">
                                 Please provide a valid region number.
                             </div>
                         </div>
                         <div class="col-md-5 mb-3">
-                            <label for="number-phone">Número</label>
-                            <input type="text" class="form-control" id="number-phone" placeholder="" value="" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" required>
+                            <label for="number-phone">Telefone</label>
+                            <input type="text" class="form-control" id="number-phone" placeholder="" value=""
+                                onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10"
+                                required>
                             <div class="invalid-feedback">
                                 Please provide a valid phone number.
                             </div>
                         </div>
                         <div class="col-md-3 mb-3">
-                            <label for="type-number">Tipo de Número</label>
+                            <label for="type-number">Tipo de Telefone</label>
                             <select class="form-select d-block w-100" id="type-number" required>
                                 <option value="">Selecione...</option>
                                 <option value="MOBILE">Pessoal</option>
@@ -178,6 +174,27 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="row">
+                        <div class="col-md-10 mb-3">
+                            <label for="address">Endereço</label>
+                            <input type="text" class="form-control" id="address"
+                                placeholder="Avenida Brigadeiro Faria Lima" required>
+                            <div class="invalid-feedback">
+                                Please enter your shipping address.
+                            </div>
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <label for="number-address">Número</label>
+                            <input type="text" class="form-control" id="number-address" placeholder="1234" required
+                                onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                            <div class="invalid-feedback">
+                                Please enter your shipping number address.
+                            </div>
+                        </div>
+                    </div>
+
 
                     <!-- <div class="mb-3">
                         <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
@@ -218,50 +235,43 @@
                                 Please select a valid city.
                             </div>
                         </div>
-                        
+
                         <div class="col-md-3 mb-3">
                             <label for="zip">CEP</label>
-                            <input type="text" class="form-control" id="cep" placeholder="" maxlength="9" required onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                            <input type="text" class="form-control" id="cep" placeholder="" maxlength="9" required
+                                onkeypress="return event.charCode >= 48 && event.charCode <= 57">
                             <div class="invalid-feedback">
                                 CEP code required.
                             </div>
                         </div>
                     </div>
-                    <!-- <hr class="mb-4">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="same-address">
-                        <label class="custom-control-label" for="same-address">Shipping address is the same as my
-                            billing address</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="save-info">
-                        <label class="custom-control-label" for="save-info">Save this information for next time</label>
-                    </div> -->
+
                     <hr class="mb-4">
 
                     <h4 class="mb-3">Pagamento</h4>
 
                     <div class="d-block my-3">
                         <div class="form-check">
-                            <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked
-                                required>
+                            <input id="credit" name="paymentMethod" type="radio" value="CREDIT_CARD"
+                                class="form-check-input" checked required>
                             <label class="form-check-label" for="credit">Cartão de Crédito</label>
                         </div>
                         <div class="form-check">
-                            <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                            <input id="debit" name="paymentMethod" type="radio" value="DEBIT_CARD"
+                                class="form-check-input" required>
                             <label class="form-check-label" for="debit">Cartão de Débito</label>
                         </div>
                         <div class="form-check">
-                            <input id="pix" name="paymentMethod" type="radio" class="form-check-input" disabled>
+                            <input id="pix" name="paymentMethod" type="radio" value="PIX" class="form-check-input"
+                                disabled>
                             <label class="form-check-label" for="pix">PIX</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label">Nome no Cartão</label>
-                                <input class="form-control" id="nome" type="text" placeholder=" "
-                                    required
-                                    onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.key == ' '">
+                            <input class="form-control" id="cardNome" type="text" placeholder=" " required
+                                onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.key == ' '">
                             <small class="text-muted">Full name as displayed on card</small>
                             <div class="invalid-feedback">
                                 Name on card is required
@@ -269,9 +279,8 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="form-label">Número do cartão</label>
-                                <input class="form-control" id="cardNum" type="text" placeholder=" "
-                                    maxlength="19" required
-                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                            <input class="form-control" id="cardNum" type="text" placeholder=" " maxlength="19" required
+                                onkeypress="return event.charCode >= 48 && event.charCode <= 57">
                             <div class="invalid-feedback">
                                 Credit card number is required
                             </div>
@@ -287,22 +296,45 @@
                         </div>
                         <div class="col-md-3 mb-3">
                             <label class="form-label">Ano Validade</label>
-                                <select class="form-select" id="yearSelect" required></select>
+                            <select class="form-select" id="yearSelect" required></select>
                             <div class="invalid-feedback">
                                 Expiration year required
                             </div>
                         </div>
                         <div class="col-md-3 mb-3">
                             <label class="form-label">CVV</label>
-                                <input class="form-control" type="text" placeholder="" maxlength="4" required
-                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                            <input class="form-control" type="text" id="cvv" maxlength="4" required
+                                onkeypress="return event.charCode >= 48 && event.charCode <= 57">
                             <div class="invalid-feedback">
                                 Security code required
                             </div>
                         </div>
                     </div>
                     <!-- <hr class="mb-4"> -->
-                    <button class="btn btn-primary btn-lg btn-block mt-3" type="submit" id="pagar">Continue to checkout</button>
+                    <button class="btn btn-primary btn-lg btn-block mt-3" type="submit" id="pagar">
+                        Finalizar pagamento
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Erro no pagamento</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Informações inválidas
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -320,29 +352,42 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="https://assets.pagseguro.com.br/checkout-sdk-js/rc/dist/browser/pagseguro.min.js"></script>
+
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (function() {
-        'use strict';
+        (function () {
+            'use strict';
 
-        window.addEventListener('load', function() {
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('needs-validation');
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                let forms = document.getElementsByClassName('needs-validation');
 
-          // Loop over them and prevent submission
-          var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
+                // Loop over them and prevent submission
+                let validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        // Verifica se o formulário é inválido
+                        if (form.checkValidity() === false) {
+                            new bootstrap.Modal("#staticBackdrop").show();
+
+                            event.preventDefault();
+                            event.stopPropagation();
+                        } else {
+                            // Previne o envio padrão
+                            event.preventDefault();
+
+                            req();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
             }, false);
-          });
-        }, false);
-      })();
+        })();
     </script>
+    <script src="./js/script.js"></script>
+    <script src="./js/env.js"></script>
+    <script src="./js/req.js"></script>
+
 </body>
 
 </html>
